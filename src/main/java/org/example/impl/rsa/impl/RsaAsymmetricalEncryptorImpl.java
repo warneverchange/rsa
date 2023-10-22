@@ -1,26 +1,28 @@
-package org.example;
+package org.example.impl.rsa.impl;
 
 import org.apache.commons.lang3.tuple.Pair;
+import org.example.SecretKeyHolder;
+import org.example.impl.rsa.RsaAsymmetricalEncryptor;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigInteger;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class RsaEncryptor implements AsymmetricalEncryptor<BigInteger, BigInteger, Pair<BigInteger, BigInteger>> {
+public class RsaAsymmetricalEncryptorImpl implements RsaAsymmetricalEncryptor<BigInteger, BigInteger, Pair<BigInteger, BigInteger>> {
     private SecretKeyHolder<Pair<BigInteger, BigInteger>> privateKey;
     private SecretKeyHolder<Pair<BigInteger, BigInteger>> publicKey;
 
-    private RsaEncryptor() {
+    private RsaAsymmetricalEncryptorImpl() {
         this.privateKey = null;
         this.publicKey = null;
     }
 
-    public static RsaEncryptor create() {
-        return new RsaEncryptor();
+    public static RsaAsymmetricalEncryptorImpl create() {
+        return new RsaAsymmetricalEncryptorImpl();
     }
 
-    public RsaEncryptor configure() {
+    public RsaAsymmetricalEncryptorImpl configure() {
         return this;
     }
 
@@ -41,14 +43,14 @@ public class RsaEncryptor implements AsymmetricalEncryptor<BigInteger, BigIntege
     }
 
     @Override
-    public RsaEncryptor privateKey(SecretKeyHolder<Pair<BigInteger, BigInteger>> privateKey) {
+    public RsaAsymmetricalEncryptorImpl privateKey(SecretKeyHolder<Pair<BigInteger, BigInteger>> privateKey) {
         Objects.requireNonNull(privateKey);
         this.privateKey = privateKey;
         return this;
     }
 
     @Override
-    public RsaEncryptor publicKey(SecretKeyHolder<Pair<BigInteger, BigInteger>> publicKey) {
+    public RsaAsymmetricalEncryptorImpl publicKey(SecretKeyHolder<Pair<BigInteger, BigInteger>> publicKey) {
         Objects.requireNonNull(publicKey);
         this.publicKey = publicKey;
         return this;

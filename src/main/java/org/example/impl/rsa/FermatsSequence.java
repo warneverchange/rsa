@@ -1,4 +1,6 @@
-package org.example;
+package org.example.impl.rsa;
+
+import org.example.utils.BigIntegerUtils;
 
 import java.math.BigInteger;
 import java.util.Iterator;

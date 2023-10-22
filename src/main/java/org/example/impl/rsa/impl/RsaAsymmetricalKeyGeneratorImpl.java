@@ -1,25 +1,27 @@
-package org.example;
+package org.example.impl.rsa.impl;
 
 
 import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
+import org.example.impl.rsa.RsaEncryptorKeyGenerator;
+import org.example.utils.KeyGeneratorUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;
 import java.util.Random;
 
-public class AsymmetricalEncryptorKeyGeneratorImpl implements AsymmetricalEncryptorKeyGenerator<Pair<BigInteger, BigInteger>> {
+public class RsaAsymmetricalKeyGeneratorImpl implements RsaEncryptorKeyGenerator<Pair<BigInteger, BigInteger>> {
     public final int DEFAULT_BIT_LENGTH = 20;
     private Pair<BigInteger, BigInteger> privateKey;
     private Pair<BigInteger, BigInteger> publicKey;
     private final Random random;
 
-    public AsymmetricalEncryptorKeyGeneratorImpl(Random random) {
+    public RsaAsymmetricalKeyGeneratorImpl(Random random) {
         this.random = random;
         generate(DEFAULT_BIT_LENGTH);
     }
 
-    public AsymmetricalEncryptorKeyGeneratorImpl(int bitLength, Random random) {
+    public RsaAsymmetricalKeyGeneratorImpl(int bitLength, Random random) {
         Objects.requireNonNull(random);
         this.random = random;
         generate(bitLength <= 0 ? DEFAULT_BIT_LENGTH : bitLength);

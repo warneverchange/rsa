@@ -1,10 +1,10 @@
 package org.example;
 
 
-public interface AsymmetricalEncryptor<T, R, S> extends Encryptor<T, R>{
-    AsymmetricalEncryptor<T, R, S> privateKey(SecretKeyHolder<S> privateKey);
-    AsymmetricalEncryptor<T, R, S> publicKey(SecretKeyHolder<S> publicKey);
+public interface AsymmetricalEncryptor<T, R, PUB, PRIV> extends Encryptor<T, R>{
+    AsymmetricalEncryptor<T, R, PUB, PRIV> privateKey(SecretKeyHolder<PRIV> privateKey);
+    AsymmetricalEncryptor<T, R, PUB, PRIV> publicKey(SecretKeyHolder<PUB> publicKey);
 
-    S getPublicKey();
-    S getPrivateKey();
+    PUB getPublicKey();
+    PRIV getPrivateKey();
 }

@@ -1,4 +1,6 @@
-package org.example;
+package org.example.utils;
+
+import org.example.impl.rsa.FermatsSequence;
 
 import java.math.BigInteger;
 

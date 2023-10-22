@@ -1,7 +1,7 @@
 package org.example;
 
-public interface AsymmetricalEncryptorKeyGenerator<T> {
+public interface AsymmetricalEncryptorKeyGenerator<PUB, PRIV> {
     void generate(int bitLength);
-    T getPrivateKey();
-    T getPublicKey();
+    PRIV getPrivateKey();
+    PUB getPublicKey();
 }
