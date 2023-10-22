@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.core.utils;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -17,9 +17,6 @@ public class BigIntegerUtils {
     }
 
     public static BigInteger getPrimitiveRoot(BigInteger module) {
-        if (!module.isProbablePrime(1)) {
-            throw new IllegalArgumentException("Argument must be prime");
-        }
         List<BigInteger> fact = new ArrayList<>();
         BigInteger phi = module.subtract(BigInteger.ONE);
         BigInteger n = phi.add(BigInteger.ZERO);
@@ -47,11 +44,8 @@ public class BigIntegerUtils {
     }
 
     public static BigInteger generateSmallestRandomCoprime(BigInteger value, Random random) {
-        int bitLength = value.subtract(BigInteger.ONE).bitLength();
-        var coprimeNumber = new BigInteger(bitLength, random);
-        while (coprimeNumber.gcd(value).compareTo(BigInteger.ONE) != 0) {
-            coprimeNumber = new BigInteger(bitLength, random);
-        }
-        return coprimeNumber;
+        var primitiveRoot = getPrimitiveRoot(value);
+        var randomPower = new BigInteger(value.subtract(BigInteger.ONE).bitLength(), random);
+        return primitiveRoot.modPow(randomPower, value);
     }
 }

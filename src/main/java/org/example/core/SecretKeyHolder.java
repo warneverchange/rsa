@@ -1,9 +1,9 @@
-package org.example;
+package org.example.core;
 
 public class SecretKeyHolder <T>{
     private final T secretKey;
 
-    private SecretKeyHolder(T secretKey) {
+    protected SecretKeyHolder(T secretKey) {
         this.secretKey = secretKey;
     }
 

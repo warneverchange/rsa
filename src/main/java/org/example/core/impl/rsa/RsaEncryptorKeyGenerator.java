@@ -1,6 +1,6 @@
-package org.example.impl.rsa;
+package org.example.core.impl.rsa;
 
-import org.example.AsymmetricalEncryptorKeyGenerator;
+import org.example.core.AsymmetricalEncryptorKeyGenerator;
 
 public interface RsaEncryptorKeyGenerator<T> extends AsymmetricalEncryptorKeyGenerator<T, T> {
 }

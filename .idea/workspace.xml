@@ -4,28 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2999ae00-191b-447f-b8f7-4108bdb9c60c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AsymmetricalEncryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AsymmetricalEncryptorKeyGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AsymmetricalEncryptorKeyGeneratorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BigIntegerUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Encryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FermatsSequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/KeyGeneratorUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RsaEncryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SecretKeyHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="2999ae00-191b-447f-b8f7-4108bdb9c60c" name="Changes" comment="feat: was added El-Gamal encryption">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/AsymmetricalEncryptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/impl/RsaAsymmetricalEncryptorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AsymmetricalEncryptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AsymmetricalEncryptorKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/AsymmetricalEncryptorKeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Encryptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SecretKeyHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/SecretKeyHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/gamal/ElGamalAsymmetricalEncryptorKeyGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/impl/gamal/ElGamalAsymmetricalEncryptorKeyGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/gamal/ElGamalEncryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/impl/gamal/ElGamalEncryptorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/rsa/FermatsSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/FermatsSequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/rsa/RsaAsymmetricalEncryptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/rsa/RsaEncryptorKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/RsaEncryptorKeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/rsa/impl/RsaAsymmetricalEncryptorImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/impl/rsa/impl/RsaAsymmetricalKeyGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/impl/RsaAsymmetricalKeyGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/BigIntegerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/utils/BigIntegerUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/KeyGeneratorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/utils/KeyGeneratorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/utils/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/BigIntegerUtilsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/BigIntegerUtilsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +64,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -77,14 +76,17 @@
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="rsa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.rsa.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,9 +94,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BigIntegerUtilsTests.getPrimitiveRootShouldWorkBest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rsa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.BigIntegerUtilsTests" />
+      <option name="METHOD_NAME" value="getPrimitiveRootShouldWorkBest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.BigIntegerUtilsTests.getPrimitiveRootShouldWorkBest" />
       </list>
     </recent_temporary>
   </component>
@@ -107,45 +126,65 @@
       <option name="presentableId" value="Default" />
       <updated>1696653868352</updated>
       <workItem from="1696653869449" duration="16501000" />
-      <workItem from="1696709252730" duration="2321000" />
+      <workItem from="1696709252730" duration="8927000" />
+      <workItem from="1697967384159" duration="1301000" />
+      <workItem from="1697975833322" duration="15676000" />
+      <workItem from="1698002022938" duration="6001000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: was added El-Gamal encryption">
+      <created>1697989847245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697989847245</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: was added El-Gamal encryption" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: was added El-Gamal encryption" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/RsaEncryptor.java</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/impl/RsaAsymmetricalEncryptorImpl.java</url>
+          <line>29</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/RsaEncryptor.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/impl/RsaAsymmetricalEncryptorImpl.java</url>
+          <line>37</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/KeyGeneratorUtils.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/utils/KeyGeneratorUtils.java</url>
           <line>7</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/FermatsSequence.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/impl/rsa/FermatsSequence.java</url>
           <line>33</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/App.java</url>
-          <line>64</line>
+          <line>66</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/StringUtils.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/utils/StringUtils.java</url>
           <line>11</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/core/impl/gamal/ElGamalAsymmetricalEncryptorKeyGeneratorImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

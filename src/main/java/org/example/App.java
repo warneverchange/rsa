@@ -2,11 +2,14 @@ package org.example;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
-import org.example.impl.gamal.ElGamalAsymmetricalEncryptorKeyGeneratorImpl;
-import org.example.impl.gamal.ElGamalEncryptor;
-import org.example.impl.rsa.impl.RsaAsymmetricalKeyGeneratorImpl;
-import org.example.impl.rsa.impl.RsaAsymmetricalEncryptorImpl;
-import org.example.utils.StringUtils;
+import org.example.core.AsymmetricalEncryptorKeyGenerator;
+import org.example.core.Encryptor;
+import org.example.core.SecretKeyHolder;
+import org.example.core.impl.gamal.ElGamalAsymmetricalEncryptorKeyGeneratorImpl;
+import org.example.core.impl.gamal.ElGamalEncryptorImpl;
+import org.example.core.impl.rsa.impl.RsaAsymmetricalKeyGeneratorImpl;
+import org.example.core.impl.rsa.impl.RsaAsymmetricalEncryptorImpl;
+import org.example.core.utils.StringUtils;
 
 import java.math.BigInteger;
 import java.util.Random;
@@ -39,7 +42,6 @@ public class App
                         .publicKey(SecretKeyHolder.of(rsaKeyGenerator.getPublicKey()));
         String msg = scanner.next();
         var encryptedMsgStream =  encryptor.encrypt(StringUtils.convertToBigIntegerStream(msg));
-        System.out.println("Encrypted msg: " + encryptedMsgStream.toString());
         System.out.println("Decrypted msg: " + StringUtils.convertBigIntegerStreamToString(encryptor.decrypt(encryptedMsgStream)));
     }
 
@@ -51,16 +53,11 @@ public class App
         System.out.println("Generated private key: " + elGamalKeyGenerator.getPrivateKey());
         System.out.print("Enter msg for encrypting: ");
         String msg = scanner.next();
-        Encryptor<BigInteger, Pair<BigInteger, BigInteger>> encryptor = ElGamalEncryptor.create()
+        Encryptor<BigInteger, Pair<BigInteger, BigInteger>> encryptor = ElGamalEncryptorImpl.create()
                 .privateKey(SecretKeyHolder.of(elGamalKeyGenerator.getPrivateKey()))
                 .publicKey(SecretKeyHolder.of(elGamalKeyGenerator.getPublicKey()))
                 .random(random);
         Stream<Pair<BigInteger, BigInteger>> encryptedMsg = encryptor.encrypt(StringUtils.convertToBigIntegerStream(msg));
-        System.out.println("Encrypted msg: ");
-        /*encryptedMsg.forEach(
-                System.out::println
-        );
-*/
         System.out.println("Decrypted msg: " + StringUtils.convertBigIntegerStreamToString(encryptor.decrypt(encryptedMsg)));
     }
 

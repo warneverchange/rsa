@@ -1,10 +1,9 @@
 package org.example;
 
-import org.example.utils.BigIntegerUtils;
+import org.example.core.utils.BigIntegerUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigInteger;

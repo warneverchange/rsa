@@ -1,10 +1,10 @@
-package org.example.impl.rsa.impl;
+package org.example.core.impl.rsa.impl;
 
 
 import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
-import org.example.impl.rsa.RsaEncryptorKeyGenerator;
-import org.example.utils.KeyGeneratorUtils;
+import org.example.core.impl.rsa.RsaEncryptorKeyGenerator;
+import org.example.core.utils.KeyGeneratorUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;

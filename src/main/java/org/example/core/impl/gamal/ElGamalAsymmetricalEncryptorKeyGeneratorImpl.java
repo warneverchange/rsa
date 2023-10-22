@@ -1,11 +1,11 @@
-package org.example.impl.gamal;
+package org.example.core.impl.gamal;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
-import org.example.AsymmetricalEncryptorKeyGenerator;
-import org.example.utils.BigIntegerUtils;
+import org.example.core.AsymmetricalEncryptorKeyGenerator;
+import org.example.core.utils.BigIntegerUtils;
 
 import java.math.BigInteger;
 import java.util.Objects;

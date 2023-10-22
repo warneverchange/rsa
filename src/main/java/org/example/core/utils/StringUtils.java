@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.core.utils;
 
 import java.math.BigInteger;
 import java.util.stream.Stream;
